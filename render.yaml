@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: talk2-admin-api
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: CORS_ORIGIN
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
