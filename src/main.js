@@ -58,7 +58,8 @@ if (apiParam) {
 
 const isLocalHost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 const storedApiBase = localStorage.getItem("chatAdminApiBaseUrl");
-const API_BASE = (isLocalHost ? "" : (storedApiBase || import.meta.env.VITE_API_BASE_URL || "")).replace(/\/$/, "");
+const DEFAULT_PRODUCTION_API_BASE = "https://talk2-admin-api.onrender.com";
+const API_BASE = (isLocalHost ? "" : (storedApiBase || import.meta.env.VITE_API_BASE_URL || DEFAULT_PRODUCTION_API_BASE)).replace(/\/$/, "");
 
 async function verifyAdminPassword(password){
   if (!API_BASE && !isLocalHost) {
