@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/talk/",
+  base: "/talk2/",
   server: {
     proxy: {
       "/api": {
