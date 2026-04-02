@@ -645,11 +645,11 @@ async function enterAdmin(){
 
   adminSelectedRoom = "";
   adminThread.innerHTML = "";
-  adminRoomTitle.textContent = "Select a room";
-  adminRoomSub.textContent = "Choose a customer room from the list";
+  adminRoomTitle.textContent = "請選擇房間";
+  adminRoomSub.textContent = "請從左側列表選擇客戶房間";
   adminInput.disabled = true;
   adminInput.value = "";
-  adminInput.placeholder = "Select a room first";
+  adminInput.placeholder = "請先選擇房間";
 
   showAdmin();
   adminSubscribeRecentRooms();
