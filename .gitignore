@@ -1,0 +1,15 @@
+node_modules
+dist
+
+# cache
+.cache
+node_modules/.cache
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# env
+.env
+.env.*

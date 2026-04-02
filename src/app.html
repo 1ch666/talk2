@@ -1,0 +1,101 @@
+<div id="roleCard" class="card">
+  <div class="centerWrap">
+    <div class="title">聊天室</div>
+    <div class="roleBtns">
+      <button class="btnPrimary roleBtnBig" id="goCustomerBtn">我是客戶</button>
+      <button class="btnDark roleBtnBig" id="goAdminBtn">我是管理員</button>
+    </div>
+  </div>
+</div>
+
+<div id="adminLoginCard" class="card hidden">
+  <div class="centerWrap">
+    <div class="title">管理員</div>
+
+    <div>
+      <div class="small">管理員密碼</div>
+      <input id="adminPassInput" type="password" placeholder="輸入密碼" />
+    </div>
+
+    <div class="actions">
+      <button class="btnDark" id="adminEnterBtn">進入後台</button>
+      <button class="btnPrimary" id="backToRoleFromAdmin">返回</button>
+    </div>
+  </div>
+</div>
+
+<div id="customerShell" class="card hidden">
+  <div class="shell">
+    <div class="side">
+      <div class="sideTop">
+        <div class="sideTopTitle">聊天</div>
+        <button class="btnGhost" id="customerExitBtn">離開</button>
+      </div>
+      <div class="sideSearch">
+        <input id="customerSearch" placeholder="搜尋" disabled />
+      </div>
+      <div class="chatList" id="customerChatList"></div>
+    </div>
+
+    <div class="main">
+      <div class="mainTop">
+        <div class="mainTitle">
+          <div class="room" id="customerRoomTitle">房間：-</div>
+          <div class="sub" id="customerRoomSub">-</div>
+        </div>
+        <div class="mainActions">
+          <button class="chip" id="customerMarkReadBtn">標記已讀</button>
+          <button class="chip" id="customerChangeRoomBtn">換房間碼</button>
+        </div>
+      </div>
+
+      <div class="thread" id="customerThread"></div>
+
+      <form class="composer" id="customerForm">
+        <div class="iconBtn" title="表情（示意）">😊</div>
+        <input id="customerInput" placeholder="輸入訊息…" autocomplete="off" />
+        <button class="sendBtn" type="submit">送出</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="adminShell" class="card hidden">
+  <div class="shell">
+    <div class="side">
+      <div class="sideTop">
+        <div class="sideTopTitle">客服後台</div>
+        <button class="btnGhost" id="adminExitBtn">離開</button>
+      </div>
+
+      <div class="sideSearch">
+        <input id="adminSearch" placeholder="搜尋房間碼…" />
+      </div>
+
+      <div class="chatList" id="adminChatList"></div>
+    </div>
+
+    <div class="main">
+      <div class="mainTop">
+        <div class="mainTitle">
+          <div class="room" id="adminRoomTitle">尚未選擇房間</div>
+          <div class="sub" id="adminRoomSub">點左側聊天室開始回覆</div>
+        </div>
+        <div class="mainActions">
+          <button class="chip" id="adminNewRoomBtn">手動輸入房間</button>
+          <button class="chip" id="adminMarkReadBtn">標記已讀</button>
+          <button class="chip" id="adminCopyRoomBtn">複製房間碼</button>
+          <button class="chip" id="adminDeleteRoomBtn">刪除聊天室</button>
+        </div>
+      </div>
+
+      <div class="thread" id="adminThread"></div>
+
+      <form class="composer" id="adminForm">
+        <div class="iconBtn" title="快捷（示意）">⚡</div>
+        <input id="adminInput" placeholder="請先選擇房間…" autocomplete="off" disabled />
+        <button class="sendBtn" type="submit">送出</button>
+      </form>
+    </div>
+  </div>
+</div>
